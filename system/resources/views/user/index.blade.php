@@ -52,7 +52,7 @@
                             </a>
                             <a class="nav-link collapsed" href="data" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             </a>
-                             <a class="nav-link" href="{{url('user')}}">
+                            <a class="nav-link" href="{{url('user')}}">
                                 <div class="sb-nav-link-icon"><i class="nav-icon fas fa-th"></i></div>
                                 User
                             </a>
@@ -78,32 +78,32 @@
                         <div class="col-md-12 mt-5">
                           <div class="card">
                             <div class="card-header">
-                                Data Produk
-                                <a href="{{url('produk/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i> Tambah Data </a>
+                                Data User
+                                <a href="{{url('user/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i> Tambah Data </a>
                       </div>
                       <div class="card-bdoy">
                         <table class="table">
                             <thead>
                                 <th>No</th>
                                 <th>Aksi</th>
+                                <th>Username</th>
                                 <th>Nama</th>
-                                <th>Harga</th>
-                                <th>Stok</th>
+                                <th>Email</th>
                             </thead>
                             <tbody>
-                                @foreach($list_produk as $produk)
+                                @foreach($list_user as $user)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>
                                         <div class="btn-group">
-                                    <a href="{{url('produk', $produk->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
-                                    <a href="{{url('produk', $produk->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
-                                    @include('template.utils.delete', ['url' => url('produk', $produk->id)])
+                                    <a href="{{url('user', $user->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
+                                    <a href="{{url('user', $user->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                                    @include('template.utils.delete', ['url' => url('user', $user->id)])
                                 </div>
                                     </td>
-                                    <td>{{$produk->nama}}</td>
-                                    <td>{{$produk->harga}}</td>
-                                    <td>{{$produk->stok}}</td>
+                                    <td>{{$user->username}}</td>
+                                    <td>{{$user->nama}}</td>
+                                    <td>{{$user->email}}</td>
                                 </tr>
                                 @endforeach
                             </tbody>

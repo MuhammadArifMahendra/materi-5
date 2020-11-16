@@ -20,14 +20,16 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                         <form class="form-log" action="{{url('log')}}" method="post">
+                                             @csrf
+                                             @include('template.utils.notif')
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Enter email address" />
+                                                <input class="form-control py-4" name="email" type="email" placeholder="Email"/>
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputPassword">Password</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" />
+                                                <input class="form-control py-4" name="password" type="password" placeholder="password"/>
                                             </div>
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
@@ -35,14 +37,12 @@
                                                     <label class="custom-control-label" for="rememberPasswordCheck">Remember password</label>
                                                 </div>
                                             </div>
-                                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="register">Forgot Password?</a>
-                                                <a class="btn btn-primary" href="index">Login</a>
-                                            </div>
+                                            <a class="small" href="#" >Forgot Password? </a>
+                                            <input type="submit" class="btn btn-primary float-right" value="Login" />
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <div class="small"><a href="register">Need an account? Sign up!</a></div>
+                                        <div class="small"><a href="{{url('register')}}">Need an account? Sign up!</a></div>
                                     </div>
                                 </div>
                             </div>

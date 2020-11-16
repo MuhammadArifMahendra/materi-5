@@ -42,19 +42,19 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link" href="index">
+                            <a class="nav-link" href="{{url('index')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                             <a class="nav-link" href="{{url('/produk')}}">
+                             <a class="nav-link" href="{{url('produk')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Produk
                             </a>
                             <a class="nav-link collapsed" href="data" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             </a>
-                            <a class="nav-link" href="keuangan">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Data Keuangan
+                            <a class="nav-link" href="{{url('user')}}">
+                                <div class="sb-nav-link-icon"><i class="nav-icon fas fa-th"></i></div>
+                                User
                             </a>
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
